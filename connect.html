@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section with Black Squares and Pentagon</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .section {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .section-background {
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .black-square-container {
+            position: absolute;
+            top: 10vh;
+            bottom: 10vh;
+            left: 18vw;
+            right: 10vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 65vw;
+        }
+        .black-square {
+            width: 60vh;
+            height: 60vh;
+            background-color: rgb(11, 46, 136);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: center;
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            padding-top: 1rem;
+            pointer-events: none;
+        }
+        .pentagon-container {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+            background: url('s.avif');
+            background-size: cover;
+            background-position: center;
+            left: 80%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .text-left {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 10px;
+            font-size: 20px;
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: left;
+            max-width: 50%;
+        }
+        .email-link {
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="section section-background" style="background-image: url('bank.avif');" id="section2">
+        <div class="black-square-container">
+            <div class="black-square">
+                <p><span style="font-size: 30px;"><br><br>We have completed deals<br>with 7k+ customers. Our network spans from<br>East to West</span></p>
+            </div>
+            <div class="black-square">
+                <p><span style="font-size: 30px;"><br><br>We have highly developed<br>AI tools and experienced<br>team for connecting you<br>with your customer</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-background" style="background-color: white;" id="section3">
+        <div class="text-left">
+            <p><span style="font-size: 35px;"><br><br>
+                This is the only website MINELOCK<br>
+                uses to deal with clients<br><br>
+                Beware of any scam<br><br><br>
+                <span style="font-size: 25px;">
+                    Contact<br>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=minelockclub@gmail.com" target="_blank" class="email-link">minelockclub@gmail.com</a>
+                </span>
+            </span></p>
+        </div>
+        <div class="pentagon-container"></div>
+    </div>
+</body>
+</html>
