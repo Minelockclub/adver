@@ -79,6 +79,34 @@
             color: red;
             cursor: pointer;
         }
+
+        @media (max-width: 768px) {
+            .black-square-container {
+                flex-direction: column;
+                left: 5vw;
+                right: 5vw;
+                width: 90vw;
+                top: 5vh;
+                bottom: 5vh;
+            }
+            .black-square {
+                width: 80vw;
+                height: auto;
+                padding: 20px;
+                font-size: 18px;
+            }
+            .pentagon-container {
+                width: 250px;
+                height: 250px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .text-left {
+                font-size: 18px;
+                max-width: 90%;
+                left: 5%;
+            }
+        }
     </style>
 </head>
 <body>
