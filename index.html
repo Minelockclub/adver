@@ -33,8 +33,10 @@
             scroll-snap-align: start;
             position: relative;
         }
+        
         .section1 {
             flex-direction: column;
+            padding: 0;
             position: relative;
         }
         .top-part {
@@ -65,6 +67,10 @@
             border-radius: 5px;
             text-decoration: none;
         }
+        .connect-box:hover {
+            background: white;
+            color: black;
+        }
         .scrolling-text {
             height: 20vh;
             width: 100%;
@@ -83,9 +89,14 @@
             animation: scrollText 18s linear infinite;
         }
         @keyframes scrollText {
-            from { left: 100%; }
-            to { left: -110%; }
+            from {
+                left: 100%;
+            }
+            to {
+                left: -110%;
+            }
         }
+        
         .section2 {
             background: rgb(12, 12, 12);
             display: flex;
@@ -96,6 +107,9 @@
             width: 25%;
             height: 50%;
             background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-radius: 10px;
             overflow: hidden;
         }
@@ -103,7 +117,9 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            cursor: pointer;
         }
+        
         .section3 {
             background: white;
             position: relative;
@@ -129,9 +145,9 @@
             height: 100%;
             object-fit: cover;
         }
+        
         .section4 {
             background: url('e.avif') center/cover no-repeat;
-            display: flex;
             justify-content: center;
             align-items: center;
             gap: 40px;
@@ -144,6 +160,7 @@
             padding: 10px;
             font-size: 15px;
         }
+        
         .section5 {
             background: black;
             display: flex;
@@ -153,39 +170,21 @@
             font-size: 20px;
             position: relative;
         }
+        .vertical-line {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: white;
+        }
+        .line1 { left: 33.33%; }
+        .line2 { left: 66.66%; }
         .text-box5 {
             width: 33.33%;
             color: white;
             padding: 10px;
             font-size: 20px;
-        }
-        @media (max-width: 768px) {
-            .top-part {
-                height: 100vh;
-            }
-            .minelock, .connect-box {
-                font-size: 20px;
-                padding: 8px 15px;
-            }
-            .scrolling-text {
-                font-size: 30px;
-            }
-            .section2 {
-                flex-direction: column;
-                align-items: center;
-            }
-            .image-box {
-                width: 90%;
-                height: auto;
-            }
-            .image-circle {
-                width: 250px;
-                height: 250px;
-            }
-            .text-box, .text-box5 {
-                width: 90%;
-                font-size: 16px;
-            }
+            text-align: left;
         }
     </style>
 </head>
