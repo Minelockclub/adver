@@ -235,11 +235,14 @@
         font-family: 'Impact';
         font-size: 24px; /* Reduce font size for mobile */
     }
+    .scrolling-text {
+        height: 10vh; /* Reduced height for mobile */
+        font-size: 40px;
 
     /* Adjust scrolling text animation for mobile */
     .scrolling-text span,
     .scrolling-text-2 span {
-        animation: scrollTextMobile 30s linear infinite; /* Faster animation */
+        animation: scrollTextMobile 3s linear infinite; /* Faster animation */
     }
 
     @keyframes scrollTextMobile {
@@ -247,9 +250,10 @@
             left: 100%; /* Start from the right edge */
         }
         to {
-            left: -110%; /* Scroll completely off the screen */
+            left: -150%; /* Scroll completely off the screen */
         }
     }
+}
 }
     </style>
 </head>
