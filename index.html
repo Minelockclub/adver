@@ -193,48 +193,64 @@
         }
 
         /* Mobile Responsive Styles */
-        @media (max-width: 767px) {
-            /* Adjust Section 2 for Mobile */
-            .section2 {
-                height: auto; /* Allow height to adjust based on content */
-                padding: 20px 0; /* Add padding for better spacing */
-            }
-            .welcome-text {
-                font-size: 15px; /* Reduce font size for mobile */
-                padding: 10px 20px; /* Adjust padding */
-                text-align: center; /* Ensure text is centered */
-            }
-            .image-box-container {
-                flex-direction: column; /* Stack images vertically */
-                gap: 20px; /* Add space between stacked images */
-            }
-            .image-box {
-                width: 80%; /* Make images wider for mobile */
-                height: 200px; /* Set a fixed height for stacked images */
-            }
+       /* Mobile Responsive Styles */
+@media (max-width: 767px) {
+    /* Adjust Section 2 for Mobile */
+    .section2 {
+        height: auto; /* Allow height to adjust based on content */
+        padding: 20px 0; /* Add padding for better spacing */
+    }
+    .welcome-text {
+        font-size: 15px; /* Reduce font size for mobile */
+        padding: 10px 20px; /* Adjust padding */
+        text-align: center; /* Ensure text is centered */
+    }
+    .image-box-container {
+        flex-direction: column; /* Stack images vertically */
+        gap: 20px; /* Add space between stacked images */
+    }
+    .image-box {
+        width: 80%; /* Make images wider for mobile */
+        height: 200px; /* Set a fixed height for stacked images */
+    }
 
-            /* Adjust Section 3 for Mobile */
-            .section3 {
-                height: auto; /* Allow height to adjust based on content */
-            }
-            .image-grid {
-                height: auto; /* Allow height to adjust based on content */
-            }
-            .image-row {
-                flex-direction: column; /* Stack images vertically */
-                height: auto; /* Allow height to adjust based on content */
-            }
-            .image-row img {
-                width: 100%; /* Make images full width */
-                height: 200px; /* Set a fixed height for stacked images */
-            }
-            .image-row .item {
-                width: 100%; /* Make items full width */
-                height: 200px; /* Set a fixed height for stacked items */
-                font-family: 'Impact';
-                font-size: 24px; /* Reduce font size for mobile */
-            }
+    /* Adjust Section 3 for Mobile */
+    .section3 {
+        height: auto; /* Allow height to adjust based on content */
+    }
+    .image-grid {
+        height: auto; /* Allow height to adjust based on content */
+    }
+    .image-row {
+        flex-direction: column; /* Stack images vertically */
+        height: auto; /* Allow height to adjust based on content */
+    }
+    .image-row img {
+        width: 100%; /* Make images full width */
+        height: 200px; /* Set a fixed height for stacked images */
+    }
+    .image-row .item {
+        width: 100%; /* Make items full width */
+        height: 200px; /* Set a fixed height for stacked items */
+        font-family: 'Impact';
+        font-size: 24px; /* Reduce font size for mobile */
+    }
+
+    /* Adjust scrolling text animation for mobile */
+    .scrolling-text span,
+    .scrolling-text-2 span {
+        animation: scrollTextMobile 5s linear infinite; /* Faster animation */
+    }
+
+    @keyframes scrollTextMobile {
+        from {
+            left: 100%; /* Start from the right edge */
         }
+        to {
+            left: -150%; /* Scroll completely off the screen */
+        }
+    }
+}
     </style>
 </head>
 <body>
