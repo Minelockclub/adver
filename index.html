@@ -192,7 +192,7 @@
             cursor: pointer;
         }
 
-        /* Media Queries for Mobile Devices */
+        /* Mobile Responsive Styles */
         @media (max-width: 767px) {
             /* Adjust Section 2 for Mobile */
             .section2 {
@@ -217,9 +217,6 @@
             .section3 {
                 height: auto; /* Allow height to adjust based on content */
             }
-            .scrolling-text-2 {
-                font-size: 50px; /* Reduce font size for mobile */
-            }
             .image-grid {
                 height: auto; /* Allow height to adjust based on content */
             }
@@ -227,10 +224,13 @@
                 flex-direction: column; /* Stack images vertically */
                 height: auto; /* Allow height to adjust based on content */
             }
-            .image-row img,
+            .image-row img {
+                width: 100%; /* Make images full width */
+                height: 200px; /* Set a fixed height for stacked images */
+            }
             .image-row .item {
-                width: 100%; /* Make images and items full width */
-                height: 150px; /* Set a fixed height for stacked images */
+                width: 100%; /* Make items full width */
+                height: 200px; /* Set a fixed height for stacked items */
                 font-size: 24px; /* Reduce font size for mobile */
             }
         }
