@@ -235,14 +235,68 @@
         font-family: 'Impact';
         font-size: 24px; /* Reduce font size for mobile */
     }
+    .scrolling-text {/* Mobile Responsive Styles */
+@media (max-width: 767px) {
+    /* Adjust Section 2 for Mobile */
+    .section2 {
+        height: auto; /* Allow height to adjust based on content */
+        padding: 20px 0; /* Add padding for better spacing */
+    }
+    .welcome-text {
+        font-size: 15px; /* Reduce font size for mobile */
+        padding: 10px 20px; /* Adjust padding */
+        text-align: center; /* Ensure text is centered */
+    }
+    .image-box-container {
+        flex-direction: column; /* Stack images vertically */
+        gap: 20px; /* Add space between stacked images */
+    }
+    .image-box {
+        width: 80%; /* Make images wider for mobile */
+        height: 200px; /* Set a fixed height for stacked images */
+    }
+
+    /* Adjust Section 3 for Mobile */
+    .section3 {
+        height: auto; /* Allow height to adjust based on content */
+    }
+    .image-grid {
+        height: auto; /* Allow height to adjust based on content */
+    }
+    .image-row {
+        flex-direction: column; /* Stack images vertically */
+        height: auto; /* Allow height to adjust based on content */
+    }
+    .image-row img {
+        width: 100%; /* Make images full width */
+        height: 200px; /* Set a fixed height for stacked images */
+    }
+    .image-row .item {
+        width: 100%; /* Make items full width */
+        height: 200px; /* Set a fixed height for stacked items */
+        font-family: 'Impact';
+        font-size: 24px; /* Reduce font size for mobile */
+    }
+
+    /* Adjust scrolling text container height for mobile */
+    .scrolling-text,
+    .scrolling-text-2 {
+        height: 10vh; /* Reduced height for both scrolling sections */
+    }
+
+    /* Adjust font size for better readability */
     .scrolling-text {
-        height: 10vh; /* Reduced height for mobile */
-        font-size: 40px;
+        font-size: 40px; /* Adjust font size for Section 1 */
+    }
+
+    .scrolling-text-2 {
+        font-size: 40px; /* Adjust font size for Section 3 */
+    }
 
     /* Adjust scrolling text animation for mobile */
     .scrolling-text span,
     .scrolling-text-2 span {
-        animation: scrollTextMobile 3s linear infinite; /* Faster animation */
+        animation: scrollTextMobile 5s linear infinite; /* Faster animation */
     }
 
     @keyframes scrollTextMobile {
@@ -253,6 +307,7 @@
             left: -150%; /* Scroll completely off the screen */
         }
     }
+}
 }
 }
     </style>
