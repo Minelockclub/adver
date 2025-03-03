@@ -6,13 +6,13 @@
     <title>MINELOCK</title>
     <style>
         @media (max-width: 767px) {
-    body {
-        transform: scale(1.5);
-        transform-origin: top left;
-        width: 1024px;
-        overflow-x: scroll;
-    }
-}
+            body {
+                transform: scale(1.5);
+                transform-origin: top left;
+                width: 1024px;
+                overflow-x: scroll;
+            }
+        }
         * {
             margin: 0;
             padding: 0;
@@ -199,9 +199,27 @@
             color: black;
             cursor: pointer;
         }
+
+        /* Mobile Notification Styles */
+        .mobile-notification {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            font-size: 20px;
+            border-radius: 10px;
+            z-index: 1000;
+            display: none;
+        }
     </style>
 </head>
 <body>
+    <!-- Mobile Notification -->
+    <div class="mobile-notification" id="mobileNotification">Tilt your mobile</div>
+
     <div class="container">
         <!-- Section 1 -->
         <div class="section section1">
@@ -303,6 +321,25 @@
 
             // Replace the image with the new div
             imgElement.parentNode.replaceChild(itemDiv, imgElement);
+        }
+
+        // Function to show mobile notification
+        function showMobileNotification() {
+            const notification = document.getElementById("mobileNotification");
+            notification.style.display = "block";
+            setTimeout(() => {
+                notification.style.display = "none";
+            }, 2000); // Hide after 2 seconds
+        }
+
+        // Check if the device is a mobile device
+        function isMobileDevice() {
+            return /Mobi|Android/i.test(navigator.userAgent);
+        }
+
+        // Show notification if on mobile
+        if (isMobileDevice()) {
+            showMobileNotification();
         }
     </script>
 </body>
